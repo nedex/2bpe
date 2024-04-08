@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>2 Bit Palette Editor</title>
+  <style>
+    .container {
+      display: flex;
+    }
+
+    .column {
+      flex: 1;
+      padding: 10px;
+    }
+
+    /* Optional: Add more styling here to fit your design needs */
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- First column for customization inputs -->
+    <div class="column" id="inputsColumn">
+      <input type="file" id="imageInput" accept="image/png"><br>
+      <input type="color" id="color1" value="#FFFFFF"> <!-- White -->
+      <input type="color" id="color2" value="#AAAAAA"> <!-- Light Gray -->
+      <input type="color" id="color3" value="#555555"> <!-- Dark Gray -->
+      <input type="color" id="color4" value="#000000"> <!-- Black -->
+      <br>
+      <label for="canvasSizeSlider">Adjust Canvas Size:</label>
+      <input type="range" id="canvasSizeSlider" min="1" max="4" step="1" value="2">
+
+      <!-- Palette Selector -->
+      <div id="paletteSelector">
+        <!-- Palette buttons will be inserted here via JavaScript -->
+      </div>
+    </div>
+
+    <!-- Second column for displaying the image -->
+    <div class="column" id="imageColumn">
+      <canvas id="imageCanvas"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
